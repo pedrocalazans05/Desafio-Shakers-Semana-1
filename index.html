@@ -1,61 +1,147 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Blog</title>
+    <title>Think Blog</title>
 </head>
+
 <body>
-    <section>
-        <header>
-            <h1>Blog</h1>
-        </header>
-
+    <header class="main__header">
+        <section class="layout__container">
+            <h1 class="title__blog">Think Blog</h1>
+            <nav class="nav__container">
+                <ul class="nav__section">
+                    <li class="nav__text">Blog</li>
+                    <li class="nav__text spaccing__text">Comentário</li>
+                    <li class="nav__text">Sobre</li>
+                </ul>
+            </nav>
+        </section>
+    </header>
+    <section class="layout__container">
         <main>
-            <article>
-                <h2>Título do Post</h2>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex possimus ut illo! Distinctio animi beatae
-                    dignissimos repellendus magnam? Enim explicabo odit amet qui nemo ex ea architecto consectetur totam
-                    obcaecati?
-                </p>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore fugiat modi, laborum autem placeat iusto sequi! Assumenda veniam doloribus, eos id dolorem ut. Vel fugiat nisi inventore veniam eveniet ducimus.
-                </p>
-                <figure>
-                    <img src="#" alt="">
-                    <figcaption>Descrição da imagem</figcaption>
-                </figure>
-            </article>
+            <section class="max__width--content main__container">
+                <article>
+                    <section class="author__section">
+                        <p>Pedro Calazans</p>
+                        <span class="vertical__bar"></span>
+                        <p>10 minutos de leitura</p>
+                        <span class="vertical__bar"></span>
+                        <p>Fev 06, 2026</p>
+                    </section>
+                    <section>
+                        <h2 class="main__title--post">A arte do HTML: O segredo para um SEO imbatível</h2>
+                        <figure class="main__image--post">
+                            <img class="image__layout" src="assets/01.png" alt="">
+                            <figcaption>Descrição da imagem</figcaption>
+                        </figure>
+                        <p class="paragraph__content">
+                            Ao desenvolver uma página web, o foco n ão deve estar apenas no aspecto visual, mas também
+                            na
+                            forma como o conteúdo é estruturado e interpretado por diferentes agentes, como motores de
+                            busca, leitores de tela e outros desenvolvedores. Nesse contexto, o HTML semântico
+                            desempenha um papel fundamental, pois fornece significado e propósito aos elementos da
+                            página. Diferentemente do uso excessivo de <code>&lt;div&gt;</code>s genéricos, a semântica
+                            permite criar documentos mais claros, organizados e alinhados com as boas práticas da web
+                            moderna.
+                        </p>
+                        <p class="paragraph__content">
+                            Durante muito tempo, a web foi dominada pelo uso excessivo de <code>&lt;div&gt;</code>s para
+                            qualquer tipo de agrupamento, um fenômeno conhecido na comunidade como "Divitis". Embora
+                            visualmente funcional, essa prática cria um código "mudo", onde nada tem hierarquia ou
+                            importância definida. Ao adotar tags semânticas, o desenvolvedor estabelece uma comunicação
+                            clara com o navegador. Por exemplo, ao usar <code>&lt;main&gt;</code>, você sinaliza
+                            explicitamente onde está o valor real da página, permitindo que ferramentas de busca e
+                            tecnologias assistivas ignorem ruídos laterais e foquem no que o usuário realmente deseja
+                            consumir.
+                        </p>
+                        <figure class="image__post">
+                            <img class="image__layout" src="assets/02.png" alt="">
+                            <figcaption>Descrição da imagem</figcaption>
+                        </figure>
+                        <p class="paragraph__content">
+                            Aqui estão algumas das principais tags semânticas e seus usos:
+                        </p>
+                        <ul>
+                            <li><code>&lt;header&gt;</code>: Representa o cabeçalho da página ou de uma seção.
+                                Geralmente, contém o logotipo e o menu de navegação.</li>
+                            <li><code>&lt;nav&gt;</code>: Agrupa os links de navegação principais, como menus ou barras
+                                laterais de navegação.</li>
+                            <li><code>&lt;main&gt;</code>: Define o conteúdo principal da página, que deve ser único e
+                                central.</li>
+                            <li><code>&lt;article&gt;</code>: Indica um conteúdo autossuficiente e independente, como um
+                                post de blog ou uma notícia.</li>
+                            <li><code>&lt;aside&gt;</code>: Inclui conteúdos relacionados, como uma barra lateral com
+                                links ou anúncios.</li>
+                            <li><code>&lt;footer&gt;</code>: O rodapé da página, onde geralmente estão informações como
+                                direitos autorais e contatos.</li>
+                            <li><code>&lt;section&gt;</code>: Agrupa seções temáticas dentro de um documento, ideal para
+                                dividir o conteúdo de forma lógica.</li>
+                        </ul>
+                        <figure class="image__post">
+                            <img src="assets/03.png" alt="">
+                            <figcaption>Descrição da imagem</figcaption>
+                        </figure>
+                        <p>Um dos principais benefícios do HTML semântico está relacionado à acessibilidade. Tecnologias
+                            assistivas, como leitores de tela, dependem de uma hierarquia bem definida para guiar
+                            usuários com deficiência visual durante a navegação. Sem tags estruturais, o leitor de tela
+                            processa a página de forma linear e confusa; com elas, o usuário pode saltar diretamente
+                            para o menu de navegação (<code>&lt;nav&gt;</code>) ou para a seção de conteúdo principal,
+                            garantindo uma experiência inclusiva e eficiente.</p>
+                        <p>Em última análise, escrever HTML Semântico é um exercício de empatia e responsabilidade
+                            técnica. Adotar esses padrões significa reconhecer que a web é diversa e que seu código deve
+                            estar preparado para ser lido em qualquer dispositivo, por qualquer pessoa ou algoritmo. Ao
+                            revisar seus projetos e substituir blocos genéricos por elementos significativos, você não
+                            está apenas otimizando o carregamento ou o ranqueamento, mas contribuindo para uma internet
+                            mais democrática e perene.</p>
+                    </section>
+                </article>
+            </section>
 
-            <aside>
-                <nav>
-                    <ul>
-                        <li>Link</li>
-                        <li>Link</li>
-                        <li>Link</li>
-                    </ul>
-                </nav>
-            </aside>
-            
-            <section>
+            <section class="max__width--content">
                 <form action="">
                     <h3>Comentário</h3>
-                    <label for="nome">Nome</label>
-                    <input type="text" name="nome">
+                    <label for="input__name">Nome</label>
+                    <input type="text" id="input__name" name="name__user" placeholder="Digite seu nome">
 
-                    <label for="comentario">Comentário</label>
-                    <input type="text" name="comentario">
+                    <label for="input__comment">Comentário</label>
+                    <textarea type="text" name="input__comment">Deixe seu comentário...</textarea>
 
                     <button type="submit">Enviar</button>
                 </form>
             </section>
         </main>
 
-        <footer>
-            <p>Todos os direitos reservados</p>
-        </footer>
+        <aside>
+            <h2>Menu</h2>
+            <nav>
+                <ul>
+                    <li>Link</li>
+                    <li>Link</li>
+                    <li>Link</li>
+                </ul>
+            </nav>
+        </aside>
     </section>
+
+    <footer class="main__footer">
+        <h2>Think Blog</h2>
+        <ul class="nav__section">
+            <li class="nav__text">Blog</li>
+            <li class="nav__text spaccing__text">Comentário</li>
+            <li class="nav__text">Sobre</li>
+        </ul>
+        <section>
+            <p>Apoio</p>
+            <figure>
+                <img src="assets/04.png" alt="">
+            </figure>
+        </section>
+        <p>&copy; 2026 Pedro Calazans. Todos direitos reservados.</p>
+    </footer>
 </body>
+
 </html>
