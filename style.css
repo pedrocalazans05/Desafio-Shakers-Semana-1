@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    text-wrap-style: balance;
+    font-family: monospace;
 }
 
 body {
@@ -10,23 +10,28 @@ body {
 }
 
 :root {
-    --width-page: 87.5rem;
-    --width-content: 61.875rem;
+    --width-page: 1400px;
+    --width-content: 990px;
 
     --eerie-black: #1A1A1A;
     --snow: #FFFAFA;
 
-    --font64px: 800 4rem monospace;
+    --font64px: 800 5rem monospace;
     --font24px: 400 1.5rem monospace;
+    --font20px: 400 1.25rem monospace;
+    --font18px: 400 1.125rem monospace;
     --font16px: 400 1rem monospace;
     --font12px: 500 0.75rem monospace;
 }
+
+/* Layout da Pagina e Tamanho fixo da Pagina*/
 
 .layout__container {
     max-width: var(--width-page);
     width: 100%;
     margin: auto;
     display: grid;
+    margin-block: 6.25rem;
     grid-template-columns: 1fr 300px;
     grid-template-areas:
         "header header"
@@ -41,9 +46,7 @@ body {
     }
 }
 
-.main__header+.layout__container {
-    margin-block: 6.25rem;
-}
+/* Tamanho fixo do conteudo */
 
 .max__width--content {
     max-width: var(--width-content);
@@ -55,7 +58,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 5.625rem;
+    height: 90px;
     padding-inline: 2rem;
 
     background-color: var(--eerie-black);
@@ -75,10 +78,22 @@ body {
         display: flex;
         flex-direction: row;
         list-style-type: none;
+
+        .link__style {
+            text-decoration: none;
+        }
     }
 
     .nav__text {
-        font: var(--font16px);
+        font: var(--font18px);
+
+        a:link {
+            color: var(--snow);
+        }
+
+        a:visited {
+            color: var(--snow);
+        }
     }
 
     .spaccing__text {
@@ -102,11 +117,11 @@ main {
     display: flex;
     flex-direction: row;
     align-items: center;
-    font: var(--font12px);
+    font: var(--font16px);
 
     .vertical__bar {
-        width: 0.125rem;
-        height: 0.9375rem;
+        width: 2px;
+        height: 15px;
         margin-inline: 0.625rem;
         background-color: var(--eerie-black);
     }
@@ -114,11 +129,11 @@ main {
 
 .main__title--post {
     font: var(--font64px);
-    margin-block-end: 3.125rem;
+    margin-block-end: 1.875rem;
 }
 
 .main__image--post {
-    margin-block-end: 5.625rem;
+    margin-block-end: 3.125rem;
 }
 
 .image__post {
@@ -127,19 +142,132 @@ main {
 
 .image__layout {
     width: 100%;
-    height: 430px;
+    height: auto;
 }
 
 .paragraph__content {
     text-align: justify;
     margin-block-end: 1.875rem;
+    font: var(--font20px);
 }
 
-aside {
+.main__comment--form {
+    margin-inline: auto;
+    margin-block: 90px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--eerie-black);
+    width: 700px;
+    height: auto;
+    padding: 20px;
+    border-radius: 5px;
+
+    .title__comment {
+        color: var(--snow);
+        font: var(--font24px);
+        margin-block-end: 30px;
+    }
+
+    .label__comment {
+        color: var(--snow);
+        font: var(--font20px);
+        margin-block-end: 10px;
+    }
+
+    #input__name {
+        margin-block-end: 15px;
+        padding: 7px;
+    }
+
+    #input__comment {
+        margin-block-end: 30px;
+        padding: 7px;
+    }
+
+    .btn__send--comment {
+        background-color: var(--snow);
+        color: var(--eerie-black);
+        padding: 7px;
+        border: none;
+    }
+}
+
+.about__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-block-start: 90px;
+
+    img {
+        width: 128px;
+        height: 128px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    .vertical__bar {
+        width: 2px;
+        height: 90px;
+        margin-inline: 0.625rem;
+        background-color: var(--eerie-black);
+    }
+
+    .about__text {
+        display: flex;
+        align-items: center;
+
+        p {
+            margin-inline: 30px;
+        }
+
+        :nth-child(3) {
+            width: 300px;
+        }
+    }
+}
+
+
+.main__aside {
     grid-area: aside;
     position: sticky;
-    top: 2rem;
-    height: fit-content;
+    top: 5rem;
+    width: 270px;
+    height: 350px;
+    padding: 2rem;
+    margin-inline-start: 2.5rem;
+    background-color: var(--eerie-black);
+
+    .title__aside {
+        font: var(--font24px);
+        color: var(--snow);
+    }
+
+    .nav__container--aside {
+        display: flex;
+        flex-direction: column;
+        list-style-type: none;
+        font: var(--font24px);
+        margin-block-start: 2rem;
+
+        .nav__text {
+            margin-block: 5px;
+            padding: 5px;
+            background-color: #FFFAFA;
+            border-radius: 5px;
+        }
+
+        a {
+            text-decoration: none
+        }
+
+        a:link {
+            color: var(--eerie-black);
+        }
+
+        a:visited {
+            color: var(--eerie-black);
+        }
+    }
 
     @media screen and (max-width: 1240px) {
         display: none;
@@ -148,15 +276,66 @@ aside {
 
 .main__footer {
     grid-area: footer;
-    color: var(--snow);
-    height: 300px;
+    height: 500px;
+    font: var(--font18px);
     background-color: var(--eerie-black);
+    color: var(--snow);
+
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
 
-    figure img {
-        width: 85px;
-        height: 25px;
+    .footer__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5rem;
+        margin-inline: auto;
+
+        .title__footer {
+            font: var(--font64px);
+        }
+
+        .nav__footer {
+            display: flex;
+
+
+            .nav__text {
+                list-style-type: none;
+
+                a {
+                    text-decoration: none
+                }
+
+                a:link {
+                    color: var(--snow);
+                }
+
+                a:visited {
+                    color: var(--snow);
+                }
+            }
+
+            .spaccing__text {
+                margin-inline: 3.75rem;
+
+                @media screen and (max-width: 1240px) {
+                    margin-inline: 1.85rem;
+                }
+            }
+        }
+    }
+
+    .shakers__logo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+
+        img {
+            width: 85px;
+            height: 25px;
+        }
     }
 }
